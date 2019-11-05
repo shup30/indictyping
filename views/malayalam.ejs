@@ -1,0 +1,154 @@
+<% include partials/malayheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">Indic Typing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Malayalam Typing | Type In Malayalam | English to Malayalam Converter</h1>
+                </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Malyalam Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.MALAYALAM],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant Malayalam conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="how">
+                <p>
+                    <h3>How to type in Malayalam</h3>
+                    <ul>
+                        <li>
+                            Press Ctrl + g to toggle between English And Malayalam Typing
+                        </li>
+                        <li>
+                            Type any word in english alphabets and pres space button to get instant Malayalam
+                            conversion online.
+                        </li>
+                        <li>
+                            Use backspace button or select the word to get various options related to selected
+                            word.
+                        </li>
+                        <li>
+                            Use Copy button to Copy the typed content in clipboard
+                        </li>
+                    </ul>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Malayalam</h3>
+
+                    Malayalam (/ˌmæləˈjɑːləm/;[5] മലയാളം, Malayāḷam ? [maləjaːɭəm]) is a Dravidian language spoken in
+                    the Indian state of Kerala and the union territories of Lakshadweep and Puducherry (Mahé) by the
+                    Malayali people, and it is one of 22 scheduled languages of India. Malayalam has official language
+                    status in the state of Kerala and in the union territories of Lakshadweep and Puducherry
+                    (Mahé)[6][7][8] and is spoken by 38 million people worldwide. Malayalam is also spoken by linguistic
+                    minorities in the neighbouring states; with significant number of speakers in the Nilgiris,
+                    Kanyakumari, and Coimbatore districts of Tamil Nadu, and Kodagu and Dakshina Kannada districts of
+                    Karnataka. Due to Malayali expatriates in the Persian Gulf, the language is also widely spoken in
+                    Gulf countries.
+
+                    The origin of Malayalam remains a matter of dispute among scholars. One view holds that Malayalam
+                    and modern Tamil are offshoots of Middle Tamil and separated from it sometime after the c. 7th
+                    century. A second view argues for the development of the two languages out of "Proto-Dravidian" or
+                    "Proto-Tamil-Malayalam" in the prehistoric era.[9][10] Designated a "Classical Language in India" in
+                    2013,[11] it developed into the current form mainly by the influence of the poet Thunchaththu
+                    Ezhuthachan in the 16th century. The oldest documents written purely in Malayalam and still
+                    surviving are the Vazhappalli Copper plates from 832 and Tharisapalli Copper plates from 849.
+
+                    The earliest script used to write Malayalam was the Vatteluttu alphabet, and later the Kolezhuttu,
+                    which derived from it.[12][unreliable source?] The current Malayalam script is based on the
+                    Vatteluttu script, which was extended with Grantha script letters to adopt Indo-Aryan
+                    loanwords.[13][14] The oldest literary work in Malayalam, distinct from the Tamil tradition, is
+                    dated from between the 9th and 11th centuries.[9] The first travelogue in any Indian language is the
+                    Malayalam Varthamanappusthakam, written by Paremmakkal Thoma Kathanar in 1785.
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>

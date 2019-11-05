@@ -1,0 +1,188 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name typingzz.com www.typingzz.com;
+
+        location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name hindi.typingzz.com;
+
+        location / {
+        proxy_pass http://hindi.localhost:3000;
+         }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name marathi.typingzz.com;
+
+        location / {
+        proxy_pass http://marathi.localhost:3000;
+
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name telugu.typingzz.com;
+
+        location / {
+        proxy_pass http://telugu.localhost:3000;
+
+        }
+}
+
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name gujarati.typingzz.com;
+
+        location / {
+        proxy_pass http://gujarati.localhost:3000;
+
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name tamil.typingzz.com;
+
+        location / {
+        proxy_pass http://tamil.localhost:3000;
+
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name kannada.typingzz.com;
+
+        location / {
+        proxy_pass http://kannada.localhost:3000;
+
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name nepali.typingzz.com;
+
+        location / {
+        proxy_pass http://nepali.localhost:3000;
+
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name oriya.typingzz.com;
+
+        location / {
+        proxy_pass http://oriya.localhost:3000;
+
+        }
+}
+
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name sanskrit.typingzz.com;
+
+        location / {
+        proxy_pass http://sanskrit.localhost:3000;
+
+        }
+}
+
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name sinhalese.typingzz.com;
+
+        location / {
+        proxy_pass http://sinhalese.localhost:3000;
+
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name urdu.typingzz.com;
+
+        location / {
+        proxy_pass http://urdu.localhost:3000;
+
+        }
+}
+
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name punjabi.typingzz.com;
+
+        location / {
+        proxy_pass http://punjabi.localhost:3000;
+
+        }
+}
+
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name malayalam.typingzz.com;
+
+        location / {
+        proxy_pass http://malayalam.localhost:3000;
+
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name bengali.typingzz.com;
+
+        location / {
+        proxy_pass http://bengali.localhost:3000;
+
+        }
+}

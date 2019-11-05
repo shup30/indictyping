@@ -1,0 +1,162 @@
+<% include partials/bengaliheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">Indic Typing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Bengali Typing | Type In Bengali | English to Bengali Converter</h1>
+                </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Bengali Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.BENGALI],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant bengali conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="how">
+
+                <p>
+                    <h3>How to type in Bengali?</h3>
+                    <ul>
+                        <li>
+                            Press Ctrl + g to toggle between English And Bengali Typing
+                        </li>
+                        <li>
+                            Type any word in english alphabets and pres space button to get instant Bengali conversion
+                            online.
+                        </li>
+                        <li>
+                            Use backspace button or select the word to get various options related to selected word.
+                        </li>
+                        <li>
+                            Use Copy button to Copy the typed content in clipboard
+                        </li>
+                    </ul>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Bengali</h3>
+
+                    Bengali (/bɛŋˈɡɔːli/),[5] also known by its endonym Bangla (UK: /ˈbʌŋlə/; বাংলা), is an Indo-Aryan
+                    language primarily spoken by the Bengalis in South Asia. It is the official and most widely spoken
+                    language of Bangladesh and second most widely spoken of the 22 scheduled languages of India, behind
+                    Hindi. In 2015, 160 million speakers were reported for Bangladesh,[2] and the 2011 Indian census
+                    counted another 100 million.[1]
+
+                    The official and de facto national language of Bangladesh is Modern Standard Bengali (Literary
+                    Bengali).[6][7][8][9] It serves as the lingua franca of the nation, with 98% of Bangladeshis being
+                    fluent in Bengali (including dialects) as their first language.[10][11] Within India, Bengali is the
+                    official language of the states of West Bengal, Tripura and the Barak Valley in the state of Assam.
+                    It is also spoken in different parts of the Brahmaputra valley of Assam. It is also the most widely
+                    spoken language in the Andaman and Nicobar Islands in the Bay of Bengal,[12] and is spoken by
+                    significant minorities in other states including Jharkhand, Bihar, Mizoram, Meghalaya, and Odisha.
+                    With approximately 250–300 million total speakers worldwide,[13] Bengali is usually counted as the
+                    sixth most spoken native language in the world by population.[14][15]
+
+                    Dictionaries from the early 20th century attributed about to 50% of the Bengali vocabulary to native
+                    words (i.e., naturally modified Prakrit words, corrupted forms of Aryan words, and Native
+                    Austro-Asiatic e.g. Munda, Dravidian words (non-Indo-European native languages). About 7% percent of
+                    Bengali words are unmodified Sanskrit, and the remaining words are from Persian, Arabic, Turkish,
+                    English, Portuguese, French, and other languages.[16] Dominant in the last group was Persian, which
+                    was also the source of some grammatical forms. More recent studies suggest that the use of native
+                    and foreign words has been increasing, mainly because of the preference of Bengali speakers for the
+                    colloquial style.[16]
+
+                    Bengali literature, with its millennium-old history and folk heritage, has extensively developed
+                    since the Bengali renaissance and is one of the most prominent and diverse literary traditions in
+                    Asia. In 1999, UNESCO recognized 21 February as International Mother Language Day in recognition of
+                    the language movement in East Bengal (now Bangladesh). Language is an important element of Bengali
+                    identity and binds together a culturally diverse region.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>

@@ -1,0 +1,145 @@
+<% include partials/punjabiheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">IndicTyping</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Punjabi Typing | Type In Punjabi | English to Punjabi Converter</h1>
+                </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Punjabi Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.PUNJABI],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant punjabi conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="how">
+
+                <p>
+                    <h3>How to type in Punjabi?</h3>
+                    <ul>
+                        <li>
+                            Press Ctrl + g to toggle between English And Punjabi Typing
+                        </li>
+                        <li>
+                            Type any word in english alphabets and pres space button to get instant Punjabi conversion
+                            online.
+                        </li>
+                        <li>
+                            Use backspace button or select the word to get various options related to selected word.
+                        </li>
+                        <li>
+                            Use Copy button to Copy the typed content in clipboard
+                        </li>
+                    </ul>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Marathi</h3>
+
+                    Punjabi (/pʌnˈdʒɑːbi/;[5] Gurmukhi: ਪੰਜਾਬੀ pãṉjābī; Shahmukhi: پنجابی paṉjābī)[6] is an Indo-Aryan
+                    language with more than 100 million native speakers around the world and especially in the Indian
+                    subcontinent. It is the native language of the Punjabi people, an ethnic group of the cultural
+                    region called the Punjab, which encompasses northwest India and eastern Pakistan.
+
+                    Punjabi is the most widely spoken language in Pakistan,[3] the 11th most widely spoken language in
+                    India, and the third most-spoken native language in the Indian subcontinent. It is also the fifth
+                    most-spoken native language, in Canada after English, French, Mandarin and Cantonese.
+
+                    Punjabi is unusual among Indo-European languages in its use of lexical tone;[7][8][9] see section
+                    4.1 below for examples. The Punjabi language is written in one of two alphabets: Shahmukhi or
+                    Gurmukhi. In the Punjab, both writing systems are used (a rare occurrence called synchronic
+                    digraphia): Shahmukhi is used mainly by Punjabi Muslims and Gurmukhi is used mainly by Punjabi
+                    Sikhs.[6]
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>

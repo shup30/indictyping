@@ -1,0 +1,144 @@
+<% include partials/oriyaheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">IndicTyping</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Oriya Typing | Type In Oriya | English to Oriya Converter</h1>
+                </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Oriya Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.ORIYA],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant Oriya conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="how">
+
+                <p>
+                    <h3>How to type in Oriya?</h3>
+                    <ul>
+                        <li>
+                            Press Ctrl + g to toggle between English And Oriya Typing
+                        </li>
+                        <li>
+                            Type any word in english alphabets and pres space button to get instant oriya conversion
+                            online.
+                        </li>
+                        <li>
+                            Use backspace button or select the word to get various options related to selected word.
+                        </li>
+                        <li>
+                            Use Copy button to Copy the typed content in clipboard
+                        </li>
+                    </ul>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Oriya</h3>
+
+                    Odia (ଓଡ଼ିଆ About this soundOṛiā (help·info); formerly romanized as Oriya)[5] is a classical
+                    Indo-Aryan language spoken in the Indian state of Odisha.[6]
+
+                    It is the official language in Odisha (Orissa)[7] where native speakers make up 82% of the
+                    population,[8] also spoken in parts of West Bengal,[9] Jharkhand, Chhattisgarh,[10] and Andhra
+                    Pradesh.[11] Odia is one of the many official languages of India; it is the official language of
+                    Odisha and the second official language of Jharkhand.[12][13][14] The language is also spoken by a
+                    sizeable population of at least 1 million people in Chhattisgarh.
+
+                    Odia is the sixth Indian language to be designated a Classical Language in India on the basis of
+                    having a long literary history and not having borrowed extensively from other
+                    languages.[15][16][17][18] The earliest known inscription in Odia dates back to the 10th century
+                    AD.[
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>

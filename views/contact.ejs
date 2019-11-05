@@ -1,0 +1,82 @@
+<% include partials/header %>
+
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">Indic Typing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Type in
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="http://hindi.indictyping.com">Hindi</a>
+                                    <a class="dropdown-item" href="http://marathi.indictyping.com">Marathi</a>
+                                    <a class="dropdown-item" href="http://gujarati.indictyping.com">Gujarati</a>
+                                    <a class="dropdown-item" href="http://tamil.indictyping.com">Tamil</a>
+                                    <a class="dropdown-item" href="http://telugu.indictyping.com">Telugu</a>
+                                    <a class="dropdown-item" href="http://kannada.indictyping.com">kannada</a>
+                                    <a class="dropdown-item" href="http://nepali.indictyping.com">Nepali</a>
+                                    <a class="dropdown-item" href="http://oriya.indictyping.com">Oriya</a>
+                                    <a class="dropdown-item" href="http://sanskrit.indictyping.com">Sanskrit</a>
+                                    <a class="dropdown-item" href="http://sinhalese.indictyping.com">Sinhalese</a>
+                                    <a class="dropdown-item" href="http://urdu.indictyping.com">Urdu</a>
+                                    <a class="dropdown-item" href="http://punjabi.indictyping.com">Punjabi</a>
+                                    <a class="dropdown-item" href="http://malayalam.indictyping.com">Malayalam</a>
+                                    <a class="dropdown-item" href="http://bengali.indictyping.com">Bengali</a>
+                                </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/privacy-policy">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-md-6 offset-md-3" style="text-align:center">
+                    <br>
+                        <div class="form-header">
+                                <h2>Send us a message</h2>
+                              </div> <br> <br>
+                        <div className="form-group">
+                                <i class="fas fa-user"></i>
+                                <label for="name"> Name</label><br>
+                                <input type="text" className="form-control" id="name" />
+                            </div><br> <br>
+                            <div className="form-group">
+                                    <i class="fas fa-envelope"></i>
+                                <label for="exampleInputEmail1">Email address</label><br>
+                                <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
+                            </div> <br> <br>
+                            <div className="form-group">
+                                    <i class="fas fa-comment-alt"></i>                                <label for="message">Message</label><br>
+                                <textarea className="form-control" cols="50" rows="5" id="message"></textarea>
+                            </div> <br>
+                            <button type="submit" class="btn btn-primary btn-md">Submit</button> <br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<% include partials/footer %>

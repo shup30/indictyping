@@ -1,0 +1,151 @@
+<% include partials/urduheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">Indic Typing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Urdu Typing | Type In Urdu | Urdu Converter</h1>
+                </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Urdu Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.URDU],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant Urdu conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="how">
+
+                <p>
+                    <h3>How to type in Urdu?</h3>
+                    <ul>
+                        <li>
+                            Press Ctrl + g to toggle between English And Urdu Typing
+                        </li>
+                        <li>
+                            Type any word in english alphabets and pres space button to get instant Urdu conversion
+                            online.
+                        </li>
+                        <li>
+                            Use backspace button or select the word to get various options related to selected word.
+                        </li>
+                        <li>
+                            Use Copy button to Copy the typed content in clipboard
+                        </li>
+                    </ul>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Urdu</h3>
+
+                    Urdu (/ˈʊərduː/;[10] Urdu: اُردُو‎ ALA-LC: Urdū [ˈʊrduː] (About this soundlisten)) (also known as
+                    Lashkari,[11][12] locally written لشکری)—or, more precisely, Modern Standard Urdu—is a Persianised
+                    standard register of the Hindustani language.[13][14] It is the official national language and
+                    lingua franca of Pakistan. In India, it is one of the 22 official languages recognized in the
+                    Constitution of India, having official status in the six states of Jammu and Kashmir, Telangana,
+                    Uttar Pradesh, Bihar, Jharkhand and West Bengal, as well as the national capital territory of Delhi.
+                    It is a registered regional language of Nepal.
+
+                    Apart from specialized vocabulary, spoken Urdu is mutually intelligible with Standard Hindi, another
+                    recognized register of Hindustani. The Urdu variant of Hindustani received recognition and patronage
+                    under British rule when the British replaced the local official languages with English and
+                    Hindustani written in Nastaʿlīq script, as the official language in North and Northwestern
+                    India.[15][16][17] Religious, social, and political factors pushed for a distinction between Urdu
+                    and Hindi in India, leading to the Hindi–Urdu controversy.[18]
+
+                    According to Nationalencyklopedin's 2010 estimates, Urdu is the 21st most spoken first language in
+                    the world, with approximately 66 million speakers.[19] According to Ethnologue's 2017 estimates,
+                    Urdu, along with standard Hindi and the languages of the Hindi belt (as Hindustani), is the 3rd most
+                    spoken language in the world, with approximately 329.1 million native speakers, and 697.4 million
+                    total speakers
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>

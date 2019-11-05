@@ -1,0 +1,150 @@
+<% include partials/kannadaheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">Indic Typing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Kannada Typing | Type In Kannada | English to Kannada Converter</h1>
+                </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Kannada Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.KANNADA],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant Kannada conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="how">
+
+                <p>
+                    <h3>How to type in Kannada?</h3>
+                    <ul>
+                        <li>
+                            Press Ctrl + g to toggle between English And Kannada Typing
+                        </li>
+                        <li>
+                            Type any word in english alphabets and pres space button to get instant Kannada conversion
+                            online.
+                        </li>
+                        <li>
+                            Use backspace button or select the word to get various options related to selected word.
+                        </li>
+                        <li>
+                            Use Copy button to Copy the typed content in clipboard
+                        </li>
+                    </ul>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Kannada</h3>
+
+                    Kannada (/ˈkɑːnədə, ˈkæn-/;[6][7] Kannada: ಕನ್ನಡ [ˈkʌnːəɖɑː]) is a Dravidian language spoken
+                    predominantly by Kannada people in India, mainly in the state of Karnataka, and by significant
+                    linguistic minorities in the states of Andhra Pradesh, Tamil Nadu, Telangana, Kerala and abroad. The
+                    language has roughly 43.7 million native speakers,[8] who are called Kannadigas (Kannadigaru).
+                    Kannada is also spoken as a second and third language by over 12.9 million non-Kannada speakers
+                    living in Karnataka, which adds up to 56.6 million speakers.[9] It is one of the scheduled languages
+                    of India and the official and administrative language of the state of Karnataka.[10]
+
+                    The Kannada language is written using the Kannada script, which evolved from the 5th-century Kadamba
+                    script. Kannada is attested epigraphically for about one and a half millennia, and literary Old
+                    Kannada flourished in the 6th-century Ganga dynasty[11] and during the 9th-century Rashtrakuta
+                    Dynasty.[12][13] Kannada has an unbroken literary history of over a thousand years.[14] Kannada
+                    literature has been presented with 8 Jnanapith awards, the most for any Dravidian language and the
+                    second highest for any Indian language.[15][16][17]
+
+                    Based on the recommendations of the Committee of Linguistic Experts, appointed by the ministry of
+                    culture, the government of India designated Kannada a classical language of India.[18][19] In July
+                    2011, a center for the study of classical Kannada was established as part of the Central Institute
+                    of Indian Languages at Mysore to facilitate research related to the language.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>

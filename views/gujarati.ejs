@@ -1,0 +1,159 @@
+<% include partials/gujheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">Indic Typing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Gujarati Typing | Type In Gujarati | English to Gujarati Converter</h1>
+                </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Gujarati Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.GUJARATI],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant Gujarati conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+                <div id="how">
+                    <p>
+                        <h3>How to type in Gujarati?</h3>
+                        <ul>
+                            <li>
+                                Press Ctrl + g to toggle between English And Gujarati Typing
+                            </li>
+                            <li>
+                                Type any word in english alphabets and pres space button to get instant Gujarati
+                                conversion online.
+                            </li>
+                            <li>
+                                Use backspace button or select the word to get various options related to selected
+                                word.
+                            </li>
+                            <li>
+                                Use Copy button to Copy the typed content in clipboard
+                            </li>
+                        </ul>
+                    
+                    </p>
+                    
+
+            </div>
+        </div>
+        
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Gujrati</h3>
+                
+                    Gujarati (/ˌɡʊdʒəˈrɑːti/;[4] ગુજરાતી gujarātī [ɡudʒəˈɾɑtiː]) is an Indo-Aryan language
+                    native to the Indian state of Gujarat and spoken predominantly by the Gujarati people.
+                    Gujarati is part of the greater Indo-European language family. Gujarati is descended from
+                    Old Gujarati (circa 1100–1500 AD). In India, it is the official language in the state of
+                    Gujarat, as well as an official language in the union territories of Daman and Diu and Dadra
+                    and Nagar Haveli. As of 2011, Gujarati is the 6th most widely spoken language in India by
+                    number of native speakers, spoken by 55.5 million speakers which amounts to about 4.5% of
+                    the total Indian population.[1] It is the 26th most widely spoken language in the world by
+                    number of native speakers as of 2007.[5]
+                
+                    The Gujarati language is more than 700 years old and is spoken by more than 55 million
+                    people worldwide.[6] Outside of Gujarat, Gujarati is spoken in many other parts of South
+                    Asia by Gujarati migrants, especially in Mumbai and Pakistan (mainly in Karachi).[7]
+                    Gujarati is also widely spoken in many countries outside South Asia by the Gujarati
+                    diaspora. In North America, Gujarati is one of the fastest growing and most widely-spoken
+                    Indian languages in the United States and Canada.[8][9] In Europe, Gujaratis form the second
+                    largest of the British South Asian speech communities, and Gujarati is the fourth most
+                    commonly spoken language in the U.K.'s capital London.[10] Gujarati is also spoken in
+                    Southeast Africa, particularly in Kenya, Uganda, Tanzania, Zambia, and South
+                    Africa.[11][12][13] Elsewhere, Gujarati is spoken to a lesser extent in China (particularly
+                    Hong Kong), Indonesia, Singapore, Australia, and Middle Eastern countries such as Bahrain.
+                </p>
+        
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>
+
+
+
+
+

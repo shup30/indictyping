@@ -1,0 +1,90 @@
+.navbar {
+    padding-left: 4rem;
+    border: 20px solid #000000;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.navbar-collapse{
+    position:relative;
+  }
+
+.navbar-brand {
+    padding-right: 0.5rem;
+    font-size: 1.89375rem;
+}
+
+h2 {
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(40, 40, 48);
+    letter-spacing: 0.5px;
+}
+body {
+    font-size: medium;
+    color: rgb(4, 58, 58);
+    background-image: linear-gradient(to top, #ffffff 0%, rgb(196, 196, 196) 100%);
+}
+
+#transliterateTextarea {
+    border: 5px solid rgb(216, 219, 219);
+    resize: both;
+    overflow: auto;
+    font-size: 20pt;
+    max-width: 95%;
+}
+
+textarea{
+    font-size: 20px !important;
+}
+
+
+.row {
+    margin-top: 20px;
+    background: #fafafa;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px #acacac;
+}
+
+.col-lg-12{
+    border: 8px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+#how{
+    padding: 20px;
+}
+
+#about{
+    padding: 20px;
+}
+
+#topc{
+    text-align:center;
+    padding-top:20px;
+}
+
+#tebox{
+    background-color: black;
+    color: white;
+
+}
+
+#titlebox{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 300;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    margin-top: 20px;
+    padding: 2px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px 5px #000000;
+    border-radius: 10px;
+
+}

@@ -1,0 +1,164 @@
+<% include partials/sanskritheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">Indictyping</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Sanskrit Typing | Type In Sanskrit | English to Sanskrit Converter</h1>
+                </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Sanskrit Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.SANSKRIT],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant Sanskrit conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="how">
+
+                <p>
+                    <h3>How to type in Sanskrit?</h3>
+                    <ul>
+                        <li>
+                            Press Ctrl + g to toggle between English And Sanskrit Typing
+                        </li>
+                        <li>
+                            Type any word in english alphabets and pres space button to get instant Sanskrit conversion
+                            online.
+                        </li>
+                        <li>
+                            Use backspace button or select the word to get various options related to selected word.
+                        </li>
+                        <li>
+                            Use Copy button to Copy the typed content in clipboard
+                        </li>
+                    </ul>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Sanskrit</h3>
+
+                    Sanskrit (/ˈsænskrɪt/; Sanskrit: संस्कृतम्, translit. saṃskṛtam, pronounced [sɐ̃skɽɪtɐm] (About this
+                    soundlisten)) is a language of ancient India with a history going back about 3,500 years.[5][6][7]
+                    It is the primary liturgical language of Hinduism and the predominant language of most works of
+                    Hindu philosophy as well as some of the principal texts of Buddhism and Jainism. Sanskrit, in its
+                    variants and numerous dialects, was the lingua franca of ancient and medieval India.[8][9][10] In
+                    the early 1st millennium CE, along with Buddhism and Hinduism, Sanskrit migrated to Southeast
+                    Asia,[11] parts of East Asia[12] and Central Asia,[13] emerging as a language of high culture and of
+                    local ruling elites in these regions.[14][15]
+
+                    Sanskrit is an Old Indo-Aryan language.[5] As one of the oldest documented members of the
+                    Indo-European family of languages,[16][note 1][note 2] Sanskrit holds a prominent position in
+                    Indo-European studies.[19] It is related to Greek and Latin,[5] as well as Hittite, Luwian, Old
+                    Avestan and many other extinct languages with historical significance to Europe, West Asia, Central
+                    Asia, and South Asia. It traces its linguistic ancestry to the Proto-Indo-Aryan language,
+                    Proto-Indo-Iranian and the Proto-Indo-European languages.[20]
+
+                    Sanskrit is traceable to the 2nd millennium BCE in a form known as the Vedic Sanskrit, with the
+                    Rigveda as the earliest known composition. A more refined and standardized grammatical form called
+                    the Classical Sanskrit emerged in mid-1st millennium BCE with the Aṣṭādhyāyī treatise of Pāṇini.[5]
+                    Sanskrit, though not necessarily Classical Sanskrit, is the root language of many Prakrit
+                    languages.[21] Examples include numerous modern daughter Northern Indian subcontinental languages
+                    such as Hindi, Marathi, Bengali, Punjabi and Nepali.[22][23][24]
+
+                    The body of Sanskrit literature encompasses a rich tradition of philosophical and religious texts,
+                    as well as poetry, music, drama, scientific, technical and other texts. In the ancient era, Sanskrit
+                    compositions were orally transmitted by methods of memorisation of exceptional complexity, rigour
+                    and fidelity.[25][26] The earliest known inscriptions in Sanskrit are from the 1st-century BCE, such
+                    as the few discovered in Ayodhya and Ghosundi-Hathibada (Chittorgarh).[27][note 3] Sanskrit texts
+                    dated to the 1st millennium CE were written in the Brahmi script, the Nāgarī script, the historic
+                    South Indian scripts and their derivative scripts.[31][32][33] Sanskrit is one of the 22 languages
+                    listed in the Eighth Schedule of the Constitution of India. It continues to be widely used as a
+                    ceremonial and ritual language in Hinduism and some Buddhist practices such as hymns and chants.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>

@@ -1,0 +1,145 @@
+<% include partials/marathiheader %>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">Indic Typing</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/">Type in other languages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/fonts">Install Fonts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://indictyping.com/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="titlebox">
+                <h1>Online Marathi Typing | Type In Marathi | Englsih to Marathi Converter</h1>
+                </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div id="topc">
+
+                    <div style="text-align:center; font-size:100px">
+                        <h2>English To Marathi Typing </h2>
+
+                    </div>
+
+                    <script type="text/javascript">
+
+                        // Load the Google Transliterate API
+                        google.load("elements", "1", {
+                            packages: "transliteration"
+                        });
+
+                        function onLoad() {
+                            var options = {
+                                sourceLanguage:
+                                    google.elements.transliteration.LanguageCode.ENGLISH,
+                                destinationLanguage:
+                                    [google.elements.transliteration.LanguageCode.MARATHI],
+                                shortcutKey: 'ctrl+g',
+                                transliterationEnabled: true
+                            };
+
+                            // Create an instance on TransliterationControl with the required
+                            // options.
+                            var control =
+                                new google.elements.transliteration.TransliterationControl(options);
+
+                            // Enable transliteration in the textbox with id
+                            // 'transliterateTextarea'.
+                            control.makeTransliteratable(['transliterateTextarea']);
+                        }
+                        google.setOnLoadCallback(onLoad);
+
+                    </script>
+
+
+                    <div class="col-lg-12" id="tebox">
+                        <br>
+                        <p> Type in English, hit space and get instant marathi conversion
+                        </p>
+                        <div>
+                            <textarea id="transliterateTextarea" placeholder="Type Here"
+                                style="width: 1000px;height: 300px"></textarea><br>
+                            <button onclick="copy()" type="button" class="btn btn-secondary btn-sm"> Copy </button>
+                            &nbsp; &nbsp; &nbsp;
+                            <button onclick="saveTextAsFile()" type="button" class="btn btn-secondary btn-sm">Save As
+                                text
+                                file</button> &nbsp; &nbsp; &nbsp;
+                        </div>
+                        <br>
+
+
+                    </div>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="how">
+
+                <p>
+                    <h3>How to type in Marathi?</h3>
+                    <ul>
+                        <li>
+                            Press Ctrl + g to toggle between English And Marathi Typing
+                        </li>
+                        <li>
+                            Type any word in english alphabets and pres space button to get instant marathi conversion
+                            online.
+                        </li>
+                        <li>
+                            Use backspace button or select the word to get various options related to selected word.
+                        </li>
+                        <li>
+                            Use Copy button to Copy the typed content in clipboard
+                        </li>
+                    </ul>
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="about">
+                <p>
+                    <h3>About Marathi</h3>
+
+                    Marathi (मराठी) is an Indo-Aryan language spoken predominantly by around 83 million
+                    Marathi people of Maharashtra, India. It is the official language and co-official
+                    language in the Maharashtra and Goa states of Western India, respectively, and is one of
+                    the 22 scheduled languages of India. There were 83 million speakers in 2011; Marathi
+                    ranks 19th in the list of most spoken languages in the world. Marathi has the third
+                    largest number of native speakers in India, after Hindi & Bengali. Marathi has some
+                    of the oldest literature of all modern Indian languages, dating from about 900 AD.
+                    The major dialects of Marathi are Standard Marathi and the Varhadi dialect.Koli,
+                    Malvani Konkani has been heavily influenced by Marathi varieties.
+
+                    Marathi distinguishes inclusive and exclusive forms of 'we' and possesses a three-way
+                    gender system that features the neuter in addition to the masculine and the feminine. In
+                    its phonology it contrasts apico-alveolar with alveopalatal affricates and alveolar with
+                    retroflex laterals ([l] and [ɭ] (Marathi letters ल and ळ respectively).
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<% include partials/footer %>
