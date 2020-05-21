@@ -29,8 +29,6 @@ var malayalam = require('./routes/malayalam/mal.js');
 var bengali = require('./routes/bengali/ben.js');
 
 
-
-
 app.use("/marathi-typing", marathi);
 app.use("/hindi-typing", hindi);
 app.use("/gujarati-typing", gujarati);
@@ -47,8 +45,6 @@ app.use("/malayalam-typing", malayalam);
 app.use("/bengali-typing", bengali);
 app.use("/nepali-typing", nepali);
 app.use("/sinhalese-typing", sinhalese);
-
-
 
 
 app.get('/', function(req, res) {
